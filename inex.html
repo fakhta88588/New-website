@@ -1,123 +1,35 @@
-<!DOCTYPE html>
-<html lang="ur" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>میری مکمل ویب سائٹ</title>
-    <style>
-        /* بنیادی سٹائلز */
-        body {
-            font-family: 'Nastaleeq', 'Jameel Noori Nastaleeq', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        /* ہیڈر */
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        /* نیویگیشن */
-        nav {
-            background: #34495e;
-            padding: 1rem;
-            text-align: center;
-        }
-        
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-        
-        /* مرکزی مواد */
-        main {
-            padding: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            min-height: 70vh;
-        }
-        
-        /* فوٹر */
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
-        }
-        
-        /* کارڈز */
-        .card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        /* بٹن */
-        .btn {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-            margin-top: 1rem;
-        }
-    </style>
-</head>
-<body>
-    <!-- ہیڈر -->
-    <header>
-        <h1>میری پروفیشنل ویب سائٹ</h1>
-        <p>خوش آمدید! یہ ایک مکمل تیار شدہ ویب سائٹ ہے</p>
-    </header>
-    
-    <!-- نیویگیشن مینو -->
-    <nav>
-        <a href="#">گھر</a>
-        <a href="#">خدمات</a>
-        <a href="#">مصنوعات</a>
-        <a href="#">ہمارے بارے میں</a>
-        <a href="#">رابطہ</a>
-    </nav>
-    
-    <!-- مرکزی مواد -->
-    <main>
-        <div class="card">
-            <h2>ہماری خدمات</h2>
-            <p>ہم اعلی معیار کی ویب ڈیزائن اور ڈویلپمنٹ خدمات پیش کرتے ہیں۔</p>
-            <a href="#" class="btn">مزید جانیں</a>
-        </div>
-        
-        <div class="card">
-            <h2>ہمارے پروجیکٹس</h2>
-            <p>ہم نے کئی بڑے اداروں کے لیے کام کیا ہے۔</p>
-            <a href="#" class="btn">پورٹ فولیو دیکھیں</a>
-        </div>
-    </main>
-    
-    <!-- فوٹر -->
-    <footer>
-        <p>© 2024 میری کمپنی. تمام حقوق محفوظ ہیں۔</p>
-        <p>رابطہ: info@example.com | فون: 03001234567</p>
-    </footer>
-</body>
-</html>git init
-git add .
-git commit -m "Initial portfolio"
-git remote add origin https://github.com/fakhta88588/New-website.git
-git branch -M main
-git push -u origin main
+{
+  "name": "new-website",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39"
+  }
+}
+export default function Home() {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
+      <h1 className="text-6xl font-bold mb-4">Hello World!</h1>
+      <p className="text-2xl">Next.js + Tailwind CSS</p>
+    </div>
+  );
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+module.exports = {
+  content: ["./pages/**/*.{js,ts,jsx,tsx}"],
+  theme: { extend: {} },
+  plugins: [],
+};
